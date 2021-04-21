@@ -3,9 +3,6 @@ import { Switch, Route, NavLink } from 'react-router-dom';
 import Deck from './Deck';
 import Battle from './Battle';
 import Rules from './Rules';
-import LogoDeck from './LogoDeck.png';
-import LogoVS from './LogoVS.png';
-import LogoRegle from './LogoRegle.png';
 
 const SApp = styled.div`
   header {
@@ -19,10 +16,17 @@ const SApp = styled.div`
   }
 
   img {
-    width: 70px;
+    width: 75px;
     height: 50px;
     position: relative;
-    right: 20px;
+    right: 22px;
+    opacity: 1;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+  img:hover {
+    opacity: 0.5;
   }
 
   li {
@@ -40,24 +44,19 @@ export default function App() {
       <header>
         <nav>
           <ul>
-            {/* <li>
-              <NavLink activeClassName="toto" exact to="/Home">
-                Home
-              </NavLink>
-            </li> */}
             <li>
               <NavLink activeClassName="NavBar" exact to="/Deck">
-                <img src={LogoDeck} alt="" />
+                <img src="/images/icones/LogoDeck.png" alt="" />
               </NavLink>
             </li>
             <li>
               <NavLink activeClassName="NavBar" to="/Battle">
-                <img src={LogoVS} alt="" />
+                <img src="/images/icones/LogoVS.png" alt="" />
               </NavLink>
             </li>
             <li>
               <NavLink activeClassName="NavBar" to="/Rules">
-                <img src={LogoRegle} alt="" />
+                <img src="/images/icones/LogoRegle.png" alt="" />
               </NavLink>
             </li>
           </ul>
