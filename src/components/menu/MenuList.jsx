@@ -7,22 +7,37 @@ import Rules from './Rules';
 export default function App() {
   return (
     <CSSMenuList>
+      <NavLink activeClassName="NavBar" exact to="/">
+        <img src="/images/icones/LogoUSG.png" alt="" className="LogoUSG" />
+      </NavLink>
       <header>
         <nav>
           <ul>
             <li>
               <NavLink activeClassName="NavBar" exact to="/Deck">
-                <img src="/images/icones/LogoDeck.png" alt="" />
+                <img
+                  src="/images/icones/LogoDeck.png"
+                  alt=""
+                  className="LogoNavBar"
+                />
               </NavLink>
             </li>
             <li>
               <NavLink activeClassName="NavBar" to="/Battle">
-                <img src="/images/icones/LogoVS.png" alt="" />
+                <img
+                  src="/images/icones/LogoVS.png"
+                  alt=""
+                  className="LogoNavBar"
+                />
               </NavLink>
             </li>
             <li>
               <NavLink activeClassName="NavBar" to="/Rules">
-                <img src="/images/icones/LogoRegle.png" alt="" />
+                <img
+                  src="/images/icones/LogoRegle.png"
+                  alt=""
+                  className="LogoNavBar"
+                />
               </NavLink>
             </li>
           </ul>
@@ -31,7 +46,7 @@ export default function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <p>WELCOME TO REACT BATTLE</p>
+            <p>Welcome to Ultimate Superheroes Game</p>
           </Route>
           <Route path="/Deck" component={Deck} />
           <Route path="/Battle" component={Battle} />
