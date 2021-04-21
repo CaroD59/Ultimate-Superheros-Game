@@ -1,52 +1,32 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 
-const DisplayDraft = ({ id }) => {
-  const sampleCards = {
-    response: 'success',
-    id: '70',
-    name: 'Batman',
-    powerstats: {
-      intelligence: '100',
-      strength: '26',
-      speed: '27',
-      durability: '50',
-      power: '47',
-      combat: '100',
-    },
-    image: {
-      url: 'https://www.superherodb.com/pictures2/portraits/10/100/639.jpg',
-    },
-  };
-
-  const [Cards, setCards] = useState(sampleCards);
-  useEffect(() => {
-    axios
-      .get(`https://superheroapi.com/api.php/4118415658211107/${id}`)
-      .then(({ data }) => {
-        setCards(data);
-      });
-  }, []);
-
-  console.log(Cards);
+const DisplayDraft = ({ name, image, powerstats, addHero }) => {
   return (
-    <div className="perso">
-      <img src={Cards.image.url} alt="" />
-      <h2>{Cards.name}</h2>
-      <p>Force :{Cards.powerstats.strength}</p>
-      <p>Defense :{Cards.powerstats.durability}</p>
-      <p>Vitesse :{Cards.powerstats.speed}</p>
-    </div>
+    <button className="perso" onClick={addHero} type="button">
+      <img src={image.url} alt="" />
+      <h2>{name}</h2>
+      <img src="./Images/icones/icone-force" alt="" />
+      <p>{powerstats.strength}</p>
+      <img src="./Images/icones/icone-defense" alt="" />
+      <p>{powerstats.durability}</p>
+      <img src="./Images/icones/icone-vitesse" alt="" />
+      <p>{powerstats.speed}</p>
+    </button>
   );
 };
 
 DisplayDraft.propTypes = {
-  id: PropTypes.number,
+  name: PropTypes.string,
+  powerstats: PropTypes.shape,
+  image: PropTypes.shape,
+  addHero: PropTypes.func,
 };
 
 DisplayDraft.defaultProps = {
-  id: null,
+  name: '',
+  powerstats: {},
+  image: {},
+  addHero: () => {},
 };
 
 export default DisplayDraft;
