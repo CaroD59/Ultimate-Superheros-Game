@@ -1,11 +1,10 @@
-import SampleComponent from './components/SampleComponent';
+import AudioPlayer from './components/AudioPlayer/AudioPlayer';
 
 function App() {
   return (
     <div className="App">
-      <SampleComponent />
+      <AudioPlayer />
     </div>
   );
 }
-
 export default App;
