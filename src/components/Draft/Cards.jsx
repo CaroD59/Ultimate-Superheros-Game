@@ -24,19 +24,19 @@ const Cards = () => {
   const [selectedHero, setSelectedHero] = useState(sampleCharacter);
   const [availableHeroes, setAvailableHeroes] = useState([]);
 
-  const pushNewHero = (heroData) => {
-    setAvailableHeroes([...availableHeroes, heroData]);
-  };
-
   useEffect(() => {
-    for (let i = 0; i < 20; i + 1) {
+    const heroes = [];
+    for (let i = 0; i < 20; i += 1) {
       const randomID = Math.floor(Math.random() * 730);
       axios
         .get(`https://superheroapi.com/api.php/4118415658211107/${randomID}`)
         .then(({ data }) => {
-          pushNewHero(data);
+          heroes.push(data);
         });
     }
+    setTimeout(() => {
+      setAvailableHeroes(heroes);
+    }, 1000);
   }, []);
 
   return (
@@ -46,7 +46,15 @@ const Cards = () => {
         <h2>Draft</h2>
         <div>
           {availableHeroes.map((hero) => {
-            return <DisplayDraft {...hero} addHero={setSelectedHero(hero)} />;
+            return (
+              <DisplayDraft
+                key={hero.name}
+                {...hero}
+                addHero={() => {
+                  setSelectedHero(hero);
+                }}
+              />
+            );
           })}
         </div>
       </section>

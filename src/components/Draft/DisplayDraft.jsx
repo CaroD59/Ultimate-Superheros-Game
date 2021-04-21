@@ -5,11 +5,11 @@ const DisplayDraft = ({ name, image, powerstats, addHero }) => {
     <button className="perso" onClick={addHero} type="button">
       <img src={image.url} alt="" />
       <h2>{name}</h2>
-      <img src="./Images/icones/icone-force" alt="" />
+      <img src="/Images/icones/icone-force.png" alt="" />
       <p>{powerstats.strength}</p>
-      <img src="./Images/icones/icone-defense" alt="" />
+      <img src="/Images/icones/icone-defense.png" alt="" />
       <p>{powerstats.durability}</p>
-      <img src="./Images/icones/icone-vitesse" alt="" />
+      <img src="/Images/icones/icone-vitesse.png" alt="" />
       <p>{powerstats.speed}</p>
     </button>
   );
