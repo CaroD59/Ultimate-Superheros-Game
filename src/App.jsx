@@ -1,11 +1,10 @@
-import SampleComponent from './components/SampleComponent';
-import Character from './components/Character';
+import Cards from './components/Draft/Cards';
+import './style.css';
 
 function App() {
   return (
     <div className="App">
-      <SampleComponent />
-      <Character />
+      <Cards />
     </div>
   );
 }
