@@ -1,11 +1,13 @@
-import SampleComponent from './components/SampleComponent';
+import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import MenuList from './components/MenuList';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <SampleComponent />
+      <BrowserRouter>
+        <MenuList />
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;
