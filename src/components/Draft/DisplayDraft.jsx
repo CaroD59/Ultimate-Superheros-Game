@@ -31,13 +31,13 @@ const DisplayDraft = ({ id }) => {
 
   console.log(Cards);
   return (
-    <>
+    <div className="perso">
       <img src={Cards.image.url} alt="" />
       <h2>{Cards.name}</h2>
       <p>Force :{Cards.powerstats.strength}</p>
       <p>Defense :{Cards.powerstats.durability}</p>
       <p>Vitesse :{Cards.powerstats.speed}</p>
-    </>
+    </div>
   );
 };
 
