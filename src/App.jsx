@@ -1,9 +1,9 @@
-import AudioPlayer from './components/AudioPlayer/AudioPlayer';
+import Play from './components/Play/Play';
 
 function App() {
   return (
     <div className="App">
-      <AudioPlayer />
+      <Play />
     </div>
   );
 }
