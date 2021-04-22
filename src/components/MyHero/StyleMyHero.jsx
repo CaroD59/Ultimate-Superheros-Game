@@ -23,7 +23,7 @@ const StyleMyHero = styled.div`
     margin: 1%;
   }
   .myHeroImg {
-    width: 200px;
+    width: 15vw;
     height: auto;
   }
   .statsHero {
