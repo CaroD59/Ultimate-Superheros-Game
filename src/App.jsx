@@ -1,11 +1,10 @@
-import SampleComponent from './components/SampleComponent';
+import Play from './components/Play/Play';
 
 function App() {
   return (
     <div className="App">
-      <SampleComponent />
+      <Play />
     </div>
   );
 }
-
 export default App;
