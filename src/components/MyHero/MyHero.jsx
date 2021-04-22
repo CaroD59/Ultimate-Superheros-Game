@@ -1,33 +1,9 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-const Div = styled.div`
-  .myHero {
-    padding: 5px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  h1 {
-    font-family: rubik;
-  }
-  .myHeroImg {
-    width: 200px;
-    height: auto;
-  }
-  .statsHero {
-    display: flex;
-  }
-  .statsHero img {
-    width: 5%;
-    height: auto;
-  }
-`;
+import StyleMyHero from './StyleMyHero';
 
 const MyHero = ({ heroData }) => {
   return (
-    <Div>
+    <StyleMyHero>
       <h1>Mon héros</h1>
       <div className="myHero">
         <h2>{heroData.name}</h2>
@@ -43,7 +19,7 @@ const MyHero = ({ heroData }) => {
           <p>{heroData.powerstats.speed}</p>
         </div>
       </div>
-    </Div>
+    </StyleMyHero>
   );
 };
 
