@@ -1,6 +1,6 @@
+import './reset.css';
 import Cards from './components/Cards/Cards';
 import './style.css';
-import './reset.css';
 
 function App() {
   return (
