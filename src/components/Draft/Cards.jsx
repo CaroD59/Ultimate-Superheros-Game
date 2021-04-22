@@ -44,7 +44,7 @@ const Cards = () => {
       <MyHero heroData={selectedHero} />
       <section className="draft">
         <h2>Draft</h2>
-        <div>
+        <div className="drafticon">
           {availableHeroes.map((hero) => {
             return (
               <DisplayDraft

@@ -2,7 +2,7 @@
   margin: 20px;
 }
 
-.cartes {
+.draft {
   border: 1px solid black;
   height: 85vh;
   width: 81vw;
@@ -10,6 +10,21 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.drafticon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.imgperso {
+  height: 155px;
+}
+
+.draftlogo {
+  height: 10px;
+  width: 30px;
 }
 
 .perso img {
