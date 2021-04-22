@@ -1,5 +1,6 @@
-import Cards from './components/Draft/Cards';
+import Cards from './components/Cards/Cards';
 import './style.css';
+import './reset.css';
 
 function App() {
   return (

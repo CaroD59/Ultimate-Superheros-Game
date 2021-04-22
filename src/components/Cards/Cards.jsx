@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import DisplayDraft from './DisplayDraft';
-import MyHero from './MyHero/MyHero';
+import MyHero from '../MyHero/MyHero';
+import DisplayDraft from '../DisplayDraft/DisplayDraft';
 
 const Cards = () => {
   const sampleCharacter = {
