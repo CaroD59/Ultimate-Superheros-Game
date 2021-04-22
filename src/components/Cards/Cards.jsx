@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import StyleCards from './StyleCards';
 import MyHero from '../MyHero/MyHero';
 import DisplayDraft from '../DisplayDraft/DisplayDraft';
 
@@ -40,25 +41,27 @@ const Cards = () => {
   }, []);
 
   return (
-    <div className="Cards">
-      <MyHero heroData={selectedHero} />
-      <section className="draft">
-        <h2>Draft</h2>
-        <div className="drafticon">
-          {availableHeroes.map((hero) => {
-            return (
-              <DisplayDraft
-                key={hero.name}
-                {...hero}
-                addHero={() => {
-                  setSelectedHero(hero);
-                }}
-              />
-            );
-          })}
-        </div>
-      </section>
-    </div>
+    <StyleCards>
+      <div className="Cards">
+        <MyHero heroData={selectedHero} />
+        <section className="draft">
+          <h2>Draft</h2>
+          <div className="draftcards">
+            {availableHeroes.map((hero) => {
+              return (
+                <DisplayDraft
+                  key={hero.name}
+                  {...hero}
+                  addHero={() => {
+                    setSelectedHero(hero);
+                  }}
+                />
+              );
+            })}
+          </div>
+        </section>
+      </div>
+    </StyleCards>
   );
 };
 
