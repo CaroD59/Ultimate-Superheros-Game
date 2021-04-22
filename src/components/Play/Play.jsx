@@ -27,7 +27,6 @@ function play() {
       />
       <audio className="song" src="/mp3/Stay.mp3" type="audio">
         <track default kind="captions" />
-        {}
       </audio>
     </SPlay>
   );
