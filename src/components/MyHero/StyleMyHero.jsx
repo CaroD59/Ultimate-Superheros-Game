@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 const StyleMyHero = styled.div`
+  h1 {
+    font-family: rubik;
+    font-weight: semibold;
+    font-size: 1.5em;
+  }
   .myHero {
     padding: 5px;
     border: 1px solid black;
@@ -8,13 +13,8 @@ const StyleMyHero = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20%;
-    background-color: E6E6E6;
-  }
-  h1 {
-    font-family: rubik;
-    font-weight: semibold;
-    font-size: 1.5em;
+    width: 15%;
+    background-color: #e6e6e6;
   }
   h2 {
     font-family: rubik;
@@ -23,7 +23,7 @@ const StyleMyHero = styled.div`
     margin: 1%;
   }
   .myHeroImg {
-    width: 15vw;
+    width: 10vw;
     height: auto;
   }
   .statsHero {

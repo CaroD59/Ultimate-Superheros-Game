@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 
 const StyleCards = styled.div`
+  .cards {
+    width: 75vw;
+  }
+  .titleDraft {
+    font-family: rubik;
+    font-weight: semibold;
+    font-size: 1.5em;
+  }
   .draft {
-    border: 1px solid black;
-    height: 85vh;
-    width: 90vw;
-    margin-left: 100px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .draftcards {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
   }
 `;

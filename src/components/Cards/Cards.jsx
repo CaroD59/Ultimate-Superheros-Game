@@ -42,10 +42,10 @@ const Cards = () => {
 
   return (
     <StyleCards>
-      <div className="Cards">
+      <div className="cards">
         <MyHero heroData={selectedHero} />
         <section className="draft">
-          <h2>Draft</h2>
+          <h2 className="titleDraft">Draft</h2>
           <div className="draftcards">
             {availableHeroes.map((hero) => {
               return (

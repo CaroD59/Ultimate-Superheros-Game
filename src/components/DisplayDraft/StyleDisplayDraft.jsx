@@ -7,31 +7,38 @@ const StyleDisplayDraft = styled.div`
   }
 
   .perso {
-    width: 140px;
-    height: 236px;
+    width: 7vw;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6e6e6;
+    margin: 2%;
+    overflow: hidden;
   }
   .perso h2 {
-    margin: 14px;
-    text-align: left;
-  }
-  .imageperso {
-    background-color: white;
+    font-size: 0.8em;
+    margin: 2% 0 2% 0%;
   }
 
   .imgperso {
-    height: 155px;
-    width: 115px;
+    width: 90%;
+    height: 80px;
   }
 
   .draftlogo {
-    height: 18px;
-    width: 21px;
+    height: auto;
+    width: 15%;
   }
   .powerstats {
-    margin-top: 10px;
+    margin: 1%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
+    width: 120%;
+  }
+  .powerstats p {
+    font-family: rubik;
+    font-size: 0.7em;
   }
 `;
 export default StyleDisplayDraft;
