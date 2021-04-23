@@ -1,15 +1,22 @@
+
+import './reset.css';
 import { BrowserRouter } from 'react-router-dom';
-import React from 'react';
-import MenuList from './components/menu/MenuList';
+import Cards from './components/Cards/Cards';
 import Play from './components/Play/Play';
+import MenuList from './components/menu/MenuList';
+
 
 export default function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
         <MenuList />
          <Play />
       </BrowserRouter>
+    <Play />
+      <div className="cartes">
+        <Cards />
+      </div>
     </div>
   );
 }
