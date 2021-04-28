@@ -1,3 +1,5 @@
+import Cards from '../Cards/Cards';
+
 export default function Deck() {
-  return <>Deck</>;
+  return <Cards />;
 }
