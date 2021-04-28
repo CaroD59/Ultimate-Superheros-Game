@@ -1,7 +1,7 @@
 import './reset.css';
 import styled from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
-import React from 'react';
+import Cards from './components/Cards/Cards';
 import MenuList from './components/menu/MenuList';
 import Play from './components/Play/Play';
 
@@ -15,6 +15,7 @@ export default function App() {
     <Sbackground>
       <BrowserRouter>
         <MenuList />
+        <Cards />
         <Play />
       </BrowserRouter>
     </Sbackground>
