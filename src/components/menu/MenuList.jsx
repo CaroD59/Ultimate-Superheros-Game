@@ -46,7 +46,7 @@ export default function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <p>Welcome to Ultimate Superheroes Game</p>
+            <p className="Welcome">Welcome to Ultimate Superheroes Game</p>
           </Route>
           <Route path="/Deck" component={Deck} />
           <Route path="/Battle" component={Battle} />

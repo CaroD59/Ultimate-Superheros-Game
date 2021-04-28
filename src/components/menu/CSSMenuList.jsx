@@ -50,6 +50,19 @@ const CSSMenuList = styled.div`
     display: flex;
     justify-content: center;
   }
+
+  .Welcome {
+    color : white;
+    font-size: 50px;
+	  text-shadow: 2px 4px 3px #6b6666;
+}
+  }
+
+  /* Responsive Media Queries
+  @media screen and (max-width: 1000px) {
+
+    } */
+  }
 `;
 
 export default CSSMenuList;
