@@ -4,7 +4,7 @@ export default function Rules() {
   return (
     <CSSRules>
       <div className="BigContainerRules">
-        <h1>Comment jouer ? // PARTIE EN PREPARATION //</h1>
+        <h1>Comment jouer ?</h1>
         <p>But du jeu : Battre votre adversaire !</p>
         <h2>Préparation :</h2>
         <p>

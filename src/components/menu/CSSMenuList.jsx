@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const CSSMenuList = styled.div`
   .LogoUSG {
-    background-color: black;
     width: 200px;
     height: 130px;
     position: relative;
@@ -24,8 +23,10 @@ const CSSMenuList = styled.div`
   .LogoNavBar {
     width: 75px;
     height: 50px;
-    position: relative;
-    right: 22px;
+    padding-top: 10%;
+    /* position: relative;
+    top: 15px;
+    left: 15px; */
     opacity: 1;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
@@ -40,6 +41,9 @@ const CSSMenuList = styled.div`
   }
 
   ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style-type: none;
   }
 
