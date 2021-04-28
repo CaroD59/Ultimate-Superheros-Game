@@ -4,12 +4,20 @@ const CSSRules = styled.div`
   p {
     color: white;
   }
+  .Thor {
+    height: 100px;
+    width: 170px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
   .BigContainerRules {
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
-    bottom: 140px;
   }
   .LogoVSRules {
     background: linear-gradient(135deg, #148ba6, 40%, #0c4459);
@@ -66,9 +74,22 @@ const CSSRules = styled.div`
 
   .pRules {
     margin-top: 20px;
+    font-size: 1.1em;
+  }
+
+  h1,
+  h2 {
+    font-size: 30px;
+    background: -webkit-linear-gradient(#eee, #8b8989);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   /* Responsive Media Queries */
+  @media screen and (max-width: 1600px) {
+    position: relative;
+    top: 300px;
+  }
   @media screen and (max-width: 1000px) {
     .BigContainerRules {
       flex-wrap: wrap;
@@ -86,6 +107,7 @@ const CSSRules = styled.div`
       .HowToPlay {
         width: 350px;
         height: 500px;
+        margin-top: 20px;
       }
     }
   }
