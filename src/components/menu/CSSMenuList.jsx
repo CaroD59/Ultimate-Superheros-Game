@@ -52,17 +52,15 @@ const CSSMenuList = styled.div`
   }
 
   .Welcome {
-    color : white;
+    color: white;
     font-size: 50px;
-	  text-shadow: 2px 4px 3px #6b6666;
-}
+    text-shadow: 2px 4px 3px #6b6666;
   }
 
   /* Responsive Media Queries
   @media screen and (max-width: 1000px) {
 
     } */
-  }
 `;
 
 export default CSSMenuList;
