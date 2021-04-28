@@ -24,9 +24,6 @@ const CSSMenuList = styled.div`
     width: 75px;
     height: 50px;
     padding-top: 10%;
-    /* position: relative;
-    top: 15px;
-    left: 15px; */
     opacity: 1;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
