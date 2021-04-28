@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 const StyleDisplayDraft = styled.div`
+  .DDraft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
   button {
     background: white;
     border-radius: 10px;

@@ -12,6 +12,7 @@ const StyleCards = styled.div`
   .draft {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   .draftcards {
