@@ -3,13 +3,21 @@ import styled from 'styled-components';
 const CSSRules = styled.div`
   p {
     color: white;
+    font-family: rubik;
   }
+  .Thor {
+    height: 100px;
+    width: 170px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
   .BigContainerRules {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    position: relative;
-    bottom: 140px;
   }
   .LogoVSRules {
     background: linear-gradient(135deg, #148ba6, 40%, #0c4459);
@@ -66,27 +74,39 @@ const CSSRules = styled.div`
 
   .pRules {
     margin-top: 20px;
+    font-size: 1.1em;
+    font-family: rubik;
+  }
+
+  .RulesTitles {
+    font-size: 30px;
+    font-family: rubik;
+    background: -webkit-linear-gradient(#eee, #8b8989);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   /* Responsive Media Queries */
+
   @media screen and (max-width: 1000px) {
     .BigContainerRules {
       flex-wrap: wrap;
+    }
 
-      .TheGame {
-        width: 350px;
-        height: 500px;
-        margin-top: 20px;
-      }
-      .Preparation {
-        width: 350px;
-        height: 500px;
-        margin-top: 20px;
-      }
-      .HowToPlay {
-        width: 350px;
-        height: 500px;
-      }
+    .TheGame {
+      width: 350px;
+      height: 500px;
+      margin-top: 20px;
+    }
+    .Preparation {
+      width: 350px;
+      height: 500px;
+      margin-top: 20px;
+    }
+    .HowToPlay {
+      width: 350px;
+      height: 500px;
+      margin-top: 20px;
     }
   }
 `;
