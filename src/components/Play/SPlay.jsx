@@ -30,11 +30,5 @@ const SPlay = styled.div`
       bottom: 89%;
     }
   }
-  @media screen and (max-width: 600px) {
-    .iconePlay {
-      left: 53%;
-      bottom: 82%;
-    }
-  }
 `;
 export default SPlay;

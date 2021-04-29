@@ -53,6 +53,7 @@ const CSSMenuList = styled.div`
   h2 {
     display: flex;
     justify-content: center;
+    font-family: rubik;
   }
 
   .Welcome {
@@ -62,6 +63,7 @@ const CSSMenuList = styled.div`
   }
 
   /* Responsive Media Queries */
+
   @media screen and (max-width: 1600px) {
     ul {
       display: flex;
@@ -93,14 +95,19 @@ const CSSMenuList = styled.div`
 
     @media screen and (max-width: 800px) {
       .LogoUSG {
-        width: 150px;
-        height: 100px;
+        width: 140px;
+        height: 90px;
         position: relative;
         left: 30px;
         top: 20px;
       }
       header {
         left: 35%;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .LogoUSG {
+        display: none;
       }
     }
   }
