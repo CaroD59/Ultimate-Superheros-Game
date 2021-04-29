@@ -2,22 +2,33 @@ import styled from 'styled-components';
 
 const StyleCards = styled.div`
   .cards {
-    width: 75vw;
   }
   .titleDraft {
+    color: white;
     font-family: rubik;
-    font-weight: semibold;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
     font-size: 1.5em;
-  }
-  .draft {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 1168px;
+    margin-left: 215px;
   }
 
+  .draft h2 {
+    display: block;
+  }
+  .underline {
+    margin-left: 215px;
+    background: linear-gradient(135deg, #148ba6, 40%, white);
+    width: 90px;
+    height: 5px;
+    margin-bottom: 20px;
+  }
   .draftcards {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 215px;
+    margin-right: 215px;
   }
 `;
 export default StyleCards;

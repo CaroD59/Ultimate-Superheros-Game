@@ -53,6 +53,7 @@ const Cards = () => {
         <MyHero heroData={selectedHero} />
         <section className="draft">
           <h2 className="titleDraft">Draft</h2>
+          <div className="underline"> </div>
           <div className="draftcards">
             {availableHeroes.map((hero) => {
               return (
