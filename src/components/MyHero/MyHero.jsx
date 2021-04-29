@@ -14,11 +14,23 @@ const MyHero = ({ heroData }) => {
           </div>
 
           <div className="statsHero">
-            <img src="/Images/icones/icone-force.png" alt="" />
+            {heroData.image.url ===
+              'https://i.ibb.co/hymsXgZ/carte-Vide.png' && <></>}
+            {heroData.powerstats.strength > 0 && (
+              <img src="/Images/icones/icone-force.png" alt="" />
+            )}
             <p>{heroData.powerstats.strength}</p>
-            <img src="/Images/icones/icone-defense.png" alt="" />
+            {heroData.image.url ===
+              'https://i.ibb.co/hymsXgZ/carte-Vide.png' && <></>}
+            {heroData.powerstats.strength > 0 && (
+              <img src="/Images/icones/icone-defense.png" alt="" />
+            )}
             <p>{heroData.powerstats.durability}</p>
-            <img src="/Images/icones/icone-vitesse.png" alt="" />
+            {heroData.image.url ===
+              'https://i.ibb.co/hymsXgZ/carte-Vide.png' && <></>}
+            {heroData.powerstats.strength > 0 && (
+              <img src="/Images/icones/icone-vitesse.png" alt="" />
+            )}
             <p>{heroData.powerstats.speed}</p>
           </div>
         </div>

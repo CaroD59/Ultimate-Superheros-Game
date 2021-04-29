@@ -1,28 +1,11 @@
-import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 import StyleCards from './StyleCards';
 import MyHero from '../MyHero/MyHero';
 import DisplayDraft from '../DisplayDraft/DisplayDraft';
 
-const Cards = () => {
-  const sampleCharacter = {
-    response: 'success',
-    id: '70',
-    name: 'Batman',
-    powerstats: {
-      intelligence: '100',
-      strength: '26',
-      speed: '27',
-      durability: '50',
-      power: '47',
-      combat: '100',
-    },
-    image: {
-      url: 'https://www.superherodb.com/pictures2/portraits/10/100/639.jpg',
-    },
-  };
-
-  const [selectedHero, setSelectedHero] = useState(sampleCharacter);
+const Cards = ({ selectedHero, setSelectedHero }) => {
   const [availableHeroes, setAvailableHeroes] = useState([]);
 
   useEffect(() => {
@@ -33,7 +16,7 @@ const Cards = () => {
         .get(`https://superheroapi.com/api.php/4118415658211107/${randomID}`)
         .then(({ data }) => {
           if (
-            data.powerstats.power !== 'null' &&
+            data.powerstats.durability !== 'null' &&
             data.powerstats.speed !== 'null' &&
             data.powerstats.strength !== 'null' &&
             data.image.url !== 'null'
@@ -71,6 +54,16 @@ const Cards = () => {
       </div>
     </StyleCards>
   );
+};
+
+Cards.propTypes = {
+  selectedHero: PropTypes.shape,
+  setSelectedHero: PropTypes.func,
+};
+
+Cards.defaultProps = {
+  selectedHero: {},
+  setSelectedHero: () => {},
 };
 
 export default Cards;
