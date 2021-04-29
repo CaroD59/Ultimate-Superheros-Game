@@ -64,51 +64,31 @@ const CSSMenuList = styled.div`
 
   /* Responsive Media Queries */
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 800px) {
     ul {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
     }
     .LogoUSG {
-      width: 200px;
-      height: 130px;
+      width: 140px;
+      height: 90px;
       position: relative;
-      left: 50px;
-      top: 30px;
-    }
-    li {
-      padding-left: 15px;
-    }
-    .Welcome {
-      position: relative;
-      top: 250px;
-      text-align: center;
+      left: 30px;
+      top: 20px;
     }
     header {
       position: absolute;
-      left: 50%;
+      left: 35%;
       height: auto;
       width: auto;
       padding-right: 20px;
     }
+  }
 
-    @media screen and (max-width: 800px) {
-      .LogoUSG {
-        width: 140px;
-        height: 90px;
-        position: relative;
-        left: 30px;
-        top: 20px;
-      }
-      header {
-        left: 35%;
-      }
-    }
-    @media screen and (max-width: 600px) {
-      .LogoUSG {
-        display: none;
-      }
+  @media screen and (max-width: 600px) {
+    .LogoUSG {
+      display: none;
     }
   }
 `;
