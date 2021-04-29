@@ -21,6 +21,8 @@ export default function Battle({ heroToFight }) {
       });
   }, []);
 
+  const [resultBattle, setResultBattle] = useState(null);
+
   const fight = () => {
     const Hero1 = {
       strength: parseInt(heroToFight.powerstats.strength, 10),
@@ -76,10 +78,11 @@ export default function Battle({ heroToFight }) {
     } while (Hero1.durability > 0 && Hero2.durability > 0);
 
     if (Hero1.durability > Hero2.durability) {
-      console.log('You win');
+      setResultBattle(true);
     } else {
-      console.log('You loose');
+      setResultBattle(false);
     }
+    return resultBattle;
   };
 
   return (
@@ -123,6 +126,11 @@ export default function Battle({ heroToFight }) {
                 <img src="/Images/icones/icone-vitesse.png" alt="" />
                 <p>{CpuHero.powerstats.speed}</p>
               </div>
+            </div>
+            <div>
+              {resultBattle === null && <></>}
+              {resultBattle === true && <h2>you win</h2>}
+              {resultBattle === false && <h2>you loose</h2>}
             </div>
           </div>
         </StyleBattle>
