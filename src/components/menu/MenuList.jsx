@@ -8,18 +8,15 @@ import Rules from './Rules';
 export default function App() {
   const sampleCharacter = {
     response: 'success',
-    id: '70',
-    name: 'Batman',
+    id: '',
+    name: '',
     powerstats: {
-      intelligence: '100',
-      strength: '26',
-      speed: '27',
-      durability: '50',
-      power: '47',
-      combat: '100',
+      strength: '',
+      speed: '',
+      durability: '',
     },
     image: {
-      url: 'https://www.superherodb.com/pictures2/portraits/10/100/639.jpg',
+      url: 'https://i.ibb.co/hymsXgZ/carte-Vide.png',
     },
   };
   const [selectedHero, setSelectedHero] = useState(sampleCharacter);

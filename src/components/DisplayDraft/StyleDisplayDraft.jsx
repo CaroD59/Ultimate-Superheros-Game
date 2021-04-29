@@ -8,12 +8,12 @@ const StyleDisplayDraft = styled.div`
 
   .perso {
     width: 7vw;
-    height: 120px;
+    height: 145px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #e6e6e6;
-    margin: 2%;
+    margin: 2px;
     overflow: hidden;
   }
   .perso h2 {
@@ -23,7 +23,7 @@ const StyleDisplayDraft = styled.div`
 
   .imgperso {
     width: 90%;
-    height: 80px;
+    height: 100px;
   }
 
   .draftlogo {

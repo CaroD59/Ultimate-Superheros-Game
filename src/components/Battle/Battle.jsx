@@ -11,7 +11,7 @@ export default function Battle({ heroToFight }) {
       .get(`https://superheroapi.com/api.php/4118415658211107/${randomID}`)
       .then(({ data }) => {
         if (
-          data.powerstats.power !== 'null' &&
+          data.powerstats.durability !== 'null' &&
           data.powerstats.speed !== 'null' &&
           data.powerstats.strength !== 'null' &&
           data.image.url !== 'null'
@@ -96,11 +96,23 @@ export default function Battle({ heroToFight }) {
                 <img src={heroToFight.image.url} alt="" className="myHeroImg" />
               </div>
               <div className="statsHero">
-                <img src="/Images/icones/icone-force.png" alt="" />
+                {heroToFight.image.url ===
+                  'https://i.ibb.co/hymsXgZ/carte-Vide.png' && <></>}
+                {heroToFight.powerstats.strength > 0 && (
+                  <img src="/Images/icones/icone-force.png" alt="" />
+                )}
                 <p>{heroToFight.powerstats.strength}</p>
-                <img src="/Images/icones/icone-defense.png" alt="" />
+                {heroToFight.image.url ===
+                  'https://i.ibb.co/hymsXgZ/carte-Vide.png' && <></>}
+                {heroToFight.powerstats.strength > 0 && (
+                  <img src="/Images/icones/icone-defense.png" alt="" />
+                )}
                 <p>{heroToFight.powerstats.durability}</p>
-                <img src="/Images/icones/icone-vitesse.png" alt="" />
+                {heroToFight.image.url ===
+                  'https://i.ibb.co/hymsXgZ/carte-Vide.png' && <></>}
+                {heroToFight.powerstats.strength > 0 && (
+                  <img src="/Images/icones/icone-vitesse.png" alt="" />
+                )}
                 <p>{heroToFight.powerstats.speed}</p>
               </div>
             </div>

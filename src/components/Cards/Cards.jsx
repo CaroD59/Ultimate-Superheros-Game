@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import StyleCards from './StyleCards';
 import MyHero from '../MyHero/MyHero';
 import DisplayDraft from '../DisplayDraft/DisplayDraft';
@@ -16,7 +16,7 @@ const Cards = ({ selectedHero, setSelectedHero }) => {
         .get(`https://superheroapi.com/api.php/4118415658211107/${randomID}`)
         .then(({ data }) => {
           if (
-            data.powerstats.power !== 'null' &&
+            data.powerstats.durability !== 'null' &&
             data.powerstats.speed !== 'null' &&
             data.powerstats.strength !== 'null' &&
             data.image.url !== 'null'
@@ -36,6 +36,7 @@ const Cards = ({ selectedHero, setSelectedHero }) => {
         <MyHero heroData={selectedHero} />
         <section className="draft">
           <h2 className="titleDraft">Draft</h2>
+          <div className="underline"> </div>
           <div className="draftcards">
             {availableHeroes.map((hero) => {
               return (
