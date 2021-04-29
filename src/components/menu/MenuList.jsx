@@ -1,10 +1,29 @@
 import { Switch, Route, NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import CSSMenuList from './CSSMenuList';
-import Deck from './Deck';
-import Battle from './Battle';
+import Cards from '../Cards/Cards';
+import Battle from '../Battle/Battle';
 import Rules from './Rules';
 
 export default function App() {
+  const sampleCharacter = {
+    response: 'success',
+    id: '70',
+    name: 'Batman',
+    powerstats: {
+      intelligence: '100',
+      strength: '26',
+      speed: '27',
+      durability: '50',
+      power: '47',
+      combat: '100',
+    },
+    image: {
+      url: 'https://www.superherodb.com/pictures2/portraits/10/100/639.jpg',
+    },
+  };
+  const [selectedHero, setSelectedHero] = useState(sampleCharacter);
+
   return (
     <CSSMenuList>
       <NavLink activeClassName="NavBar" exact to="/">
@@ -48,8 +67,15 @@ export default function App() {
           <Route exact path="/">
             <p className="Welcome">Welcome to Ultimate Superheroes Game</p>
           </Route>
-          <Route path="/Deck" component={Deck} />
-          <Route path="/Battle" component={Battle} />
+          <Route path="/Deck">
+            <Cards
+              selectedHero={selectedHero}
+              setSelectedHero={setSelectedHero}
+            />
+          </Route>
+          <Route path="/Battle">
+            <Battle heroToFight={selectedHero} />
+          </Route>
           <Route path="/Rules" component={Rules} />
         </Switch>
       </main>
