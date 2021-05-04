@@ -90,7 +90,7 @@ export default function Battle({ heroToFight }) {
       {CpuHero.image && (
         <StyleBattle>
           <div className="container">
-            <div className="myHeroToFight">
+            <div className="myHeroToFight cardHero">
               <h2>{heroToFight.name}</h2>
               <div>
                 <img src={heroToFight.image.url} alt="" className="myHeroImg" />
@@ -122,10 +122,10 @@ export default function Battle({ heroToFight }) {
               type="button"
               className="buttonFight"
             >
-              FIGHT
+              <img src="/Images/icones/vs.png" alt="versus-button" />
             </button>
 
-            <div className="CpuHero">
+            <div className="CpuHero cardHero">
               <h2>{CpuHero.name}</h2>
               <div>
                 <img src={CpuHero.image.url} alt="" className="myHeroImg" />
@@ -141,8 +141,11 @@ export default function Battle({ heroToFight }) {
             </div>
             <div>
               {resultBattle === null && <></>}
-              {resultBattle === true && <h2>you win</h2>}
-              {resultBattle === false && <h2>you loose</h2>}
+              {resultBattle !== null && (
+                <div className="resultBattle">
+                  <h2>YOU {resultBattle ? 'WIN' : 'LOOSE'} THE FIGHT !</h2>
+                </div>
+              )}
             </div>
           </div>
         </StyleBattle>
