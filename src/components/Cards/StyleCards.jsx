@@ -10,7 +10,6 @@ const StyleCards = styled.div`
     letter-spacing: 0.3px;
     margin-bottom: 8px;
     font-size: 1.5em;
-    width: 1168px;
     margin-left: 215px;
   }
 
@@ -29,6 +28,12 @@ const StyleCards = styled.div`
     flex-wrap: wrap;
     margin-left: 215px;
     margin-right: 215px;
+  }
+  @media screen and (max-width: 800px) {
+    .draftcards {
+      margin-left: 46px;
+      margin-right: 20px;
+    }
   }
 `;
 export default StyleCards;
