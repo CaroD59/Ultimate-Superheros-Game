@@ -9,10 +9,11 @@ const StyleMyHero = styled.div`
     margin-bottom: 8px;
     font-size: 1.5em;
     margin-top: -231px;
+    margin-left: -90px;
   }
 
   .underline {
-    margin-left: 37px;
+    margin-left: -53px;
     background: linear-gradient(135deg, #148ba6, 40%, white);
     width: 145px;
     height: 5px;
@@ -60,7 +61,8 @@ const StyleMyHero = styled.div`
 
   @media screen and (max-width: 800px) {
     .Hero h1 {
-      margin-top: 5px;
+      margin-top: 45px;
+      margin-left: -23px;
     }
     .perso {
       width: 11vw;
@@ -71,6 +73,9 @@ const StyleMyHero = styled.div`
     .myHeroImg {
       width: 13vw;
       height: auto;
+    }
+    .underline {
+      margin-left: 15px;
     }
   }
 `;
