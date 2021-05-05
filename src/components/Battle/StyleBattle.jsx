@@ -85,10 +85,28 @@ const StyleBattle = styled.div`
     justify-content: center;
     border-radius: 20px;
     border: 2px solid #148ba6;
+
     h2 {
       font-size: 2em;
       font-weight: bold;
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    .container{
+      margin-top : 35%;
+    }
+    .myHeroToFight,
+  .CpuHero {
+    width : 25vw;
+    height : 100%;
+  }
+  .myHeroImg {
+    width: 100%;
+    height: auto;
+  }
+  .resultBattle{
+    width : 80vw;
   }
 `;
 
