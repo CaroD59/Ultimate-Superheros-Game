@@ -77,12 +77,13 @@ export default function Battle({ heroToFight }) {
       }
     } while (Hero1.durability > 0 && Hero2.durability > 0);
 
-    if (Hero1.durability > Hero2.durability) {
-      setResultBattle(true);
-    } else {
-      setResultBattle(false);
-    }
-    return resultBattle;
+    setTimeout(() => {
+      if (Hero1.durability > Hero2.durability) {
+        setResultBattle(true);
+      } else {
+        setResultBattle(false);
+      }
+    }, 3000);
   };
 
   return (
