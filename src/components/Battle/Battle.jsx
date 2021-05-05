@@ -85,7 +85,7 @@ export default function Battle({ heroToFight }) {
       } else {
         setResultBattle(false);
       }
-    }, 3000);
+    }, 5000);
   };
 
   return (
