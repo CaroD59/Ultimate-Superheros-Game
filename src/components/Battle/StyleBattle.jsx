@@ -78,7 +78,7 @@ const StyleBattle = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #e6e6e6;
-    width: 25vw;
+    width: 28vw;
     height: 10vh;
     display: flex;
     align-items: center;

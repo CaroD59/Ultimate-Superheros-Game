@@ -1,3 +1,5 @@
+import StyleAnimBattle from './StyleAnimBattle';
+
 function AnimBattle() {
   const pop1 = '/Images/anim/pop1.png';
   const pop2 = '/Images/anim/pop2.png';
@@ -9,16 +11,16 @@ function AnimBattle() {
   const pop8 = '/Images/anim/pop8.png';
 
   return (
-    <div>
-      <img src={pop1} alt="" className="1" />
-      <img src={pop2} alt="" className="2" />
-      <img src={pop3} alt="" className="3" />
-      <img src={pop4} alt="" className="4" />
-      <img src={pop5} alt="" className="5" />
-      <img src={pop6} alt="" className="6" />
-      <img src={pop7} alt="" className="7" />
-      <img src={pop8} alt="" className="8" />
-    </div>
+    <StyleAnimBattle>
+      <img src={pop1} alt="" className="pop1" />
+      <img src={pop2} alt="" className="pop2" />
+      <img src={pop3} alt="" className="pop3" />
+      <img src={pop4} alt="" className="pop4" />
+      <img src={pop5} alt="" className="pop5" />
+      <img src={pop6} alt="" className="pop6" />
+      <img src={pop7} alt="" className="pop7" />
+      <img src={pop8} alt="" className="pop8" />
+    </StyleAnimBattle>
   );
 }
 
