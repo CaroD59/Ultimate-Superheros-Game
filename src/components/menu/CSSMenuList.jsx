@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 const CSSMenuList = styled.div`
-  .spiderman {
-    text-align: center;
-  }
   .LogoUSG {
     width: 200px;
     height: 130px;
@@ -65,6 +62,16 @@ const CSSMenuList = styled.div`
   /* Responsive Media Queries */
 
   @media screen and (max-width: 800px) {
+    header {
+      position: absolute;
+      top: 30px;
+      left: 275px;
+      right: auto;
+      height: auto;
+      width: auto;
+      padding-right: 20px;
+    }
+
     ul {
       display: flex;
       flex-direction: row;
@@ -77,12 +84,11 @@ const CSSMenuList = styled.div`
       left: 30px;
       top: 20px;
     }
-    header {
-      position: absolute;
-      left: 35%;
-      height: auto;
-      width: auto;
-      padding-right: 20px;
+
+    .Welcome {
+      margin-top: 200px;
+      text-align: center;
+      font-size: 40px;
     }
   }
 
