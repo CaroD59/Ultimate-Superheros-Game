@@ -39,13 +39,24 @@ export default function App() {
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="NavBar" to="/Battle">
+              {selectedHero.image.url ===
+                'https://i.ibb.co/hymsXgZ/carte-Vide.png' && (
                 <img
                   src="/images/icones/LogoVS.png"
                   alt=""
-                  className="LogoNavBar"
+                  className="LogoNavBar fightDisable"
                 />
-              </NavLink>
+              )}
+              {selectedHero.image.url !==
+                'https://i.ibb.co/hymsXgZ/carte-Vide.png' && (
+                <NavLink activeClassName="NavBar" to="/Battle">
+                  <img
+                    src="/images/icones/LogoVS.png"
+                    alt=""
+                    className="LogoNavBar"
+                  />
+                </NavLink>
+              )}
             </li>
             <li>
               <NavLink activeClassName="NavBar" to="/Rules">

@@ -8,7 +8,7 @@ const StyleDisplayDraft = styled.div`
 
   .perso {
     width: 7vw;
-    height: 145px;
+    height: 157px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,8 +22,8 @@ const StyleDisplayDraft = styled.div`
   }
 
   .imgperso {
-    width: 90%;
-    height: 100px;
+    width: 99px;
+    height: 117px;
   }
 
   .draftlogo {
@@ -39,6 +39,11 @@ const StyleDisplayDraft = styled.div`
   .powerstats p {
     font-family: rubik;
     font-size: 0.7em;
+  }
+  @media screen and (max-width: 800px) {
+    .perso {
+      width: 14vw;
+    }
   }
 `;
 export default StyleDisplayDraft;
