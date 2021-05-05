@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import StyleBattle from './StyleBattle';
+import AnimBattle from '../AnimBattle/AnimBattle';
 
 export default function Battle({ heroToFight }) {
   const [CpuHero, setCpuHero] = useState({});
@@ -24,7 +25,10 @@ export default function Battle({ heroToFight }) {
   const [resultBattle, setResultBattle] = useState(null);
   const audio = new Audio('/mp3/vs.mp3');
 
+  const [playAnim, setPlayAnim] = useState(false);
+
   const fight = () => {
+    setPlayAnim(true);
     audio.play();
     const Hero1 = {
       strength: parseInt(heroToFight.powerstats.strength, 10),
@@ -149,6 +153,7 @@ export default function Battle({ heroToFight }) {
                   <h2>YOU {resultBattle ? 'WIN' : 'LOOSE'} THE FIGHT !</h2>
                 </div>
               )}
+              {playAnim && <AnimBattle />}
             </div>
           </div>
         </StyleBattle>
