@@ -22,8 +22,10 @@ export default function Battle({ heroToFight }) {
   }, []);
 
   const [resultBattle, setResultBattle] = useState(null);
+  const audio = new Audio('/mp3/vs.mp3');
 
   const fight = () => {
+    audio.play();
     const Hero1 = {
       strength: parseInt(heroToFight.powerstats.strength, 10),
       speed: parseInt(heroToFight.powerstats.speed, 10),
