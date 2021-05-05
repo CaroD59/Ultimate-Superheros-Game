@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import StyleBattle from './StyleBattle';
+import AnimBattle from '../AnimBattle/AnimBattle';
 
 export default function Battle({ heroToFight }) {
   const [CpuHero, setCpuHero] = useState({});
@@ -22,8 +23,13 @@ export default function Battle({ heroToFight }) {
   }, []);
 
   const [resultBattle, setResultBattle] = useState(null);
+  const audio = new Audio('/mp3/vs.mp3');
+
+  const [playAnim, setPlayAnim] = useState(false);
 
   const fight = () => {
+    setPlayAnim(true);
+    audio.play();
     const Hero1 = {
       strength: parseInt(heroToFight.powerstats.strength, 10),
       speed: parseInt(heroToFight.powerstats.speed, 10),
@@ -77,12 +83,13 @@ export default function Battle({ heroToFight }) {
       }
     } while (Hero1.durability > 0 && Hero2.durability > 0);
 
-    if (Hero1.durability > Hero2.durability) {
-      setResultBattle(true);
-    } else {
-      setResultBattle(false);
-    }
-    return resultBattle;
+    setTimeout(() => {
+      if (Hero1.durability > Hero2.durability) {
+        setResultBattle(true);
+      } else {
+        setResultBattle(false);
+      }
+    }, 12000);
   };
 
   return (
@@ -90,7 +97,7 @@ export default function Battle({ heroToFight }) {
       {CpuHero.image && (
         <StyleBattle>
           <div className="container">
-            <div className="myHeroToFight">
+            <div className="myHeroToFight cardHero">
               <h2>{heroToFight.name}</h2>
               <div>
                 <img src={heroToFight.image.url} alt="" className="myHeroImg" />
@@ -122,10 +129,10 @@ export default function Battle({ heroToFight }) {
               type="button"
               className="buttonFight"
             >
-              FIGHT
+              <img src="/Images/icones/vs.png" alt="versus-button" />
             </button>
 
-            <div className="CpuHero">
+            <div className="CpuHero cardHero">
               <h2>{CpuHero.name}</h2>
               <div>
                 <img src={CpuHero.image.url} alt="" className="myHeroImg" />
@@ -141,8 +148,12 @@ export default function Battle({ heroToFight }) {
             </div>
             <div>
               {resultBattle === null && <></>}
-              {resultBattle === true && <h2>you win</h2>}
-              {resultBattle === false && <h2>you loose</h2>}
+              {resultBattle !== null && (
+                <div className="resultBattle">
+                  <h2>YOU {resultBattle ? 'WIN' : 'LOOSE'} THE FIGHT !</h2>
+                </div>
+              )}
+              {playAnim && <AnimBattle />}
             </div>
           </div>
         </StyleBattle>

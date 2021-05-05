@@ -59,6 +59,10 @@ const CSSMenuList = styled.div`
     text-shadow: 2px 4px 3px #474646;
   }
 
+  .fightDisable {
+    opacity: 50%;
+  }
+
   /* Responsive Media Queries */
 
   @media screen and (max-width: 800px) {
