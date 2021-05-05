@@ -88,8 +88,22 @@ const CSSRules = styled.div`
 
   /* Responsive Media Queries */
 
+  @media screen and (max-width: 1600px) {
+    .BigContainerRules {
+      margin-top: 70px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .BigContainerRules {
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+  }
+
   @media screen and (max-width: 1000px) {
     .BigContainerRules {
+      margin-top: 20px;
       flex-wrap: wrap;
     }
 

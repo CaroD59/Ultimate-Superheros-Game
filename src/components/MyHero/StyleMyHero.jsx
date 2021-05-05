@@ -8,6 +8,7 @@ const StyleMyHero = styled.div`
     letter-spacing: 0.3px;
     margin-bottom: 8px;
     font-size: 1.5em;
+    margin-top: -231px;
   }
 
   .underline {
@@ -55,6 +56,22 @@ const StyleMyHero = styled.div`
   }
   .statsHero p {
     font-family: rubik;
+  }
+
+  @media screen and (max-width: 800px) {
+    .Hero h1 {
+      margin-top: 5px;
+    }
+    .perso {
+      width: 11vw;
+    }
+    .myHero {
+      width: 120px;
+    }
+    .myHeroImg {
+      width: 13vw;
+      height: auto;
+    }
   }
 `;
 

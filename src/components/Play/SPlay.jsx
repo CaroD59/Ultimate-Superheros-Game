@@ -10,17 +10,13 @@ const SPlay = styled.div`
   }
 
   /* Responsive Media Queries */
-  @media screen and (max-width: 1600px) {
-    .iconePlay {
-      left: 90%;
-      bottom: 89%;
-    }
-  }
 
   @media screen and (max-width: 800px) {
     .iconePlay {
-      left: 80%;
-      bottom: 89%;
+      position: absolute;
+      top: 30px;
+      left: 650px;
+      right: 0;
     }
   }
 
