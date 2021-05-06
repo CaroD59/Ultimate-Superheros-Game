@@ -150,7 +150,7 @@ export default function Battle({ heroToFight }) {
               {resultBattle === null && <></>}
               {resultBattle !== null && (
                 <div className="resultBattle">
-                  <h2>YOU {resultBattle ? 'WIN' : 'LOOSE'} THE FIGHT !</h2>
+                  <h2>YOU {resultBattle ? 'WIN' : 'LOSE'} THE FIGHT !</h2>
                 </div>
               )}
               {playAnim && <AnimBattle />}
