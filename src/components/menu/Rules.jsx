@@ -9,7 +9,7 @@ export default function Rules() {
           <p className="pRules">
             Le joueur ayant la plus grande vitesse engage le combat (icone:
             &quot;ailes&quot;) La valeur de l&apos;attaque (icone:
-            &quot;bouclier&quot;) du joueur ayant démarrer le combat et alors
+            &quot;poing&quot;) du joueur ayant démarrer le combat et alors
             deduite de la défense (icone: &quot;bouclier&quot;) du joueur
             adversaire. Si la défense du joueur attaqué n&apos;est pas tombé à
             0, celui démarre alors sa phase d attaque. Ce processus sera alors
