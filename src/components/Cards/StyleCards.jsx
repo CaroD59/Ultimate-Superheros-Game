@@ -34,6 +34,12 @@ const StyleCards = styled.div`
       margin-left: 46px;
       margin-right: 20px;
     }
+    .titleDraft {
+      margin-left: 53px;
+    }
+    .underline {
+      margin-left: 53px;
+    }
   }
 `;
 export default StyleCards;
