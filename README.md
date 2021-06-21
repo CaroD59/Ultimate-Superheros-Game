@@ -1,3 +1,9 @@
+![USG2](https://user-images.githubusercontent.com/76882345/122745484-5696ad80-d289-11eb-8f64-585331e7c6a4.png)
+
+![USG3](https://user-images.githubusercontent.com/76882345/122745511-5c8c8e80-d289-11eb-8705-21240af325d6.png)
+
+![USG1](https://user-images.githubusercontent.com/76882345/122745533-62826f80-d289-11eb-8328-446e1dbd76b6.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
